@@ -1,9 +1,9 @@
 class Credit
   attr_reader :ammount, :description
 
-  def initialize(*args)
-    @ammount = args[0][:credit]
-    @description = args[0][:description]
-    @date = args[0][:date]
+  def initialize(move)
+    @ammount = move[:credit]
+    @description = move[:description]
+    @date = move[:date]
   end
 end

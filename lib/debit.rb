@@ -1,8 +1,9 @@
 class Debit
   attr_reader :ammount, :description
 
-  def initialize(*args)
-    @ammount = args[0][:debit]
-    @description = args[0][:description]
+  def initialize(move)
+    @ammount = move[:debit]
+    @description = move[:description]
+    @date = move[:date]
   end
 end
