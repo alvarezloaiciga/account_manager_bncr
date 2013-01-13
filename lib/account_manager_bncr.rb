@@ -2,7 +2,7 @@ require 'credit'
 require 'debit'
 require 'csv_parser'
 
-class AccountManager
+class AccountManagerBNCR
   attr_reader :credits, :debits
 
   def initialize file
