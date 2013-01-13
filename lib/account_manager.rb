@@ -1,8 +1,8 @@
 require 'credit'
+require 'debit'
 require 'csv_parser'
 
 class AccountManager
-  attr :account_data
   attr_reader :credits, :debits
 
   def initialize file

@@ -1,9 +1,7 @@
-class Debit
-  attr_reader :ammount, :description
-
+require 'transaction'
+class Debit < Transaction
   def initialize(move)
     @ammount = move[:debit]
-    @description = move[:description]
-    @date = move[:date]
+    super(move)
   end
 end

@@ -25,7 +25,7 @@ class CSVParser
   def parse_account_move move
     {
       office: move[0].to_i,
-      date: Date.parse(move[1]),
+      date: move[1],
       document: move[2].to_i,
       credit: move[3].to_f,
       debit: move[4].to_f,

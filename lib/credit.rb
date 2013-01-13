@@ -1,9 +1,7 @@
-class Credit
-  attr_reader :ammount, :description
-
+require 'transaction'
+class Credit < Transaction
   def initialize(move)
     @ammount = move[:credit]
-    @description = move[:description]
-    @date = move[:date]
+    super(move)
   end
 end

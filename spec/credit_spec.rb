@@ -1,15 +1,12 @@
 require 'credit'
+require 'date'
 
 describe Credit do
   context ".new" do
-    let(:credit){ Credit.new(credit:1234.12, description: 'This is a description') }
-
     it "assigns ammount" do
-      credit.ammount.should == 1234.12
-    end
-
-    it "assigns description" do
-      credit.description.should == 'This is a description'
+      move = {credit:1234.12, description: 'This is a description', date: "2012/12/26" }
+      credit = Credit.new(move)
+      credit.ammount.should == move[:credit]
     end
   end
 end

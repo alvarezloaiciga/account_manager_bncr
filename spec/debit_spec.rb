@@ -1,15 +1,12 @@
 require 'debit'
+require 'date'
 
 describe Debit do
   context ".new" do
-    let(:debit){ Debit.new(debit:1234.12, description: 'This is a description') }
-
     it "assigns ammount" do
-      debit.ammount.should == 1234.12
-    end
-
-    it "assigns description" do
-      debit.description.should == 'This is a description'
+      move = {debit:1234.12, description: 'This is a description', date: "2012/12/26" }
+      debit = Debit.new(move)
+      debit.ammount.should == move[:debit]
     end
   end
 end

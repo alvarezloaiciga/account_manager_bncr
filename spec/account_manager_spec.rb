@@ -19,5 +19,4 @@ describe AccountManager do
     account_manager.credits[1].description.should == "NETFLIX.COM 866-716-0414 CA"
     account_manager.credits[2].description.should == "PAGO DE TARJETA 7308 PAGO TARJ CREDOMATIC"
   end
-
 end
